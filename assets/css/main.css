@@ -2202,9 +2202,10 @@
 						font-size: 18px;
 						/*width: 44px;
 						height: 44px;
-						line-height: 44px;*/
-						/*gad*/
-						padding: 1.1em .9em;
+						*/
+						/*gad*/    line-height: 60px;
+						 line-height: 60px;
+                         padding: 0 .9em;
 						text-align: center;
 						color: #fff;
 						content: '\f0c9';
