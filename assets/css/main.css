@@ -2160,7 +2160,8 @@
 				background-color: rgba(59, 62, 69, 0.9);
 				box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 0px 0px 2px rgba(255, 255, 255, 0.075), 0px 1px 6px 0px rgba(0, 0, 0, 0.35);
 				display: block;
-				height: 44px;
+				/*gad*/
+				height: 60px;
 				left: 0;
 				position: fixed;
 				text-shadow: -1px -1px 0 black;
@@ -2182,10 +2183,11 @@
 				#titleBar .toggle {
 					position: absolute;
 					left: 0;
+					/*gad*/
 					top: 0;
-					width: 60px;
-					height: 44px;
-					opacity: 0.25;
+                    width: 60px;
+                    height: 96%;
+					opacity: 0.3;
 				}
 
 					#titleBar .toggle:before {
@@ -2198,9 +2200,11 @@
 						-webkit-font-smoothing: antialiased;
 						-moz-osx-font-smoothing: grayscale;
 						font-size: 18px;
-						width: 44px;
+						/*width: 44px;
 						height: 44px;
-						line-height: 44px;
+						line-height: 44px;*/
+						/*gad*/
+						padding: 1.1em .9em;
 						text-align: center;
 						color: #fff;
 						content: '\f0c9';
@@ -2291,6 +2295,7 @@
 					color: #fff;
 				}
 
+    /*gad*/
 			body.navPanel-visible #page-wrapper {
 				-moz-transform: translateX(275px);
 				-webkit-transform: translateX(275px);
@@ -2299,10 +2304,10 @@
 			}
 
 			body.navPanel-visible #titleBar {
-				-moz-transform: translateX(275px);
-				-webkit-transform: translateX(275px);
-				-ms-transform: translateX(275px);
-				transform: translateX(275px);
+				-moz-transform: translateX(274px);
+				-webkit-transform: translateX(274px);
+				-ms-transform: translateX(274px);
+				transform: translateX(274px);
 			}
 
 			body.navPanel-visible #navPanel {
