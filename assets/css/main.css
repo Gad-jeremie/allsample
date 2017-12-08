@@ -2190,6 +2190,43 @@
 					opacity: 0.3;
 				}
 
+				/*fa fa gad cart*/
+				#titleBar .fafa {
+					position: absolute;
+					right: 0;
+					/*gad*/
+					top: 0;
+                    width: 60px;
+                    height: 96%;
+					opacity: 0.3;
+					text-decoration: none;
+				}
+
+
+					#titleBar .fafa:before {
+						display: normal;
+						font-family: FontAwesome;
+						text-decoration: none;
+						font-style: normal;
+						font-weight: normal;
+						line-height: 1;
+						-webkit-font-smoothing: antialiased;
+						-moz-osx-font-smoothing: grayscale;
+						font-size: 18px;
+						/*width: 44px;
+						height: 44px;
+						*/
+						/*gad*/    line-height: 60px;
+						 line-height: 62px;
+                         padding: 0 .9em;
+						text-align: center;
+						color: #fff;
+						content: '\f07a';
+					}
+
+					/*fa fa gad cart*/
+
+
 					#titleBar .toggle:before {
 						display: inline-block;
 						font-family: FontAwesome;
