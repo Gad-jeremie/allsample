@@ -124,11 +124,11 @@ $("#appearmenu").css({"display": "none"});
 $(document).scroll(function(){
 
 if($("#titleBar").height()< $(document).scrollTop()){
-$('#appearmenu').fadeIn(200);
+$('#appearmenu').fadeIn(270);
 
  
 } else{
-$('#appearmenu').fadeOut(200);
+$('#appearmenu').fadeOut(50);
 }
 
 });
