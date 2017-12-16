@@ -1392,6 +1392,7 @@
 			margin: 0 2em 2em 0;
 		}
 
+
 		.image.centered {
 			display: block;
 			margin: 0 0 2.5em 0;
@@ -2144,11 +2145,29 @@
 				padding-bottom: 1px;
 			}
 
+
+		 
+
+/*1st menu*/
 			#titleBar {
-				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				backface-visibility: hidden;
+			 
+				background-color: #444;
+				box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3), inset 0px 0px 0px 2px rgba(255, 255, 255, 0.075), 0px 1px 6px 0px rgba(0, 0, 0, 0.35);
+				display: block;
+				/*gad*/
+				height: 55px;
+				left: 0;
+				position: absolute;
+				text-shadow: -1px -1px 0 black;
+				top: 0px;
+				width: 100%;
+				z-index: 10001;
+			}
+
+
+			/*gad*/
+			#appearmenu {
+				 
 				background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)), url("images/bg02.png");
 				background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)), url("images/bg02.png");
 				background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)), url("images/bg02.png");
@@ -2157,18 +2176,19 @@
 				-webkit-transition: -webkit-transform 0.5s ease;
 				-ms-transition: -ms-transform 0.5s ease;
 				transition: transform 0.5s ease;
-				background-color: rgba(59, 62, 69, 0.9);
+				background-color:#942b2b;
 				box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 0px 0px 2px rgba(255, 255, 255, 0.075), 0px 1px 6px 0px rgba(0, 0, 0, 0.35);
 				display: block;
 				/*gad*/
-				height: 60px;
+				height: 40px;
 				left: 0;
 				position: fixed;
 				text-shadow: -1px -1px 0 black;
 				top: 0;
 				width: 100%;
-				z-index: 10001;
+				/*z-index: 10001;*/
 			}
+
 
 				#titleBar .title {
 					display: block;
@@ -2189,6 +2209,10 @@
                     height: 96%;
 					opacity: 0.3;
 				}
+
+
+
+
 
 				/*fa fa gad cart*/
 				#titleBar .fafa {

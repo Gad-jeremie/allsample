@@ -374,4 +374,29 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+
+
+	<script type="text/javascript">
+ 
+
+if($("#titleBar").height()> $(document).scrollTop()){
+
+$("#appearmenu").css({"display": "none"});
+}
+
+$(document).scroll(function(){
+
+if($("#titleBar").height()< $(document).scrollTop()){
+$('#appearmenu').fadeIn(200);
+
+ 
+} else{
+$('#appearmenu').fadeOut(200);
+}
+
+});
+
+ 
+
+</script>
 </html>
