@@ -2191,7 +2191,7 @@
 				left: 0;
 				position: fixed;
 				text-shadow: -1px -1px 0 black;
-				top: 0;
+				top: -1em;
 				width: 100%;
 				z-index: 10;
 			}
