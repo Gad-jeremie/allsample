@@ -69,9 +69,80 @@
 						'<a href="#" class="fafa"></a>' +
 						'<span class="title">' + $('#logo').html() + '</span>' +
 
+						/*select*/
+						'<select id="mounth">' + 
+                         
+						 '<option value="hide">-- Month --</option>'+
+						  '<option value="january" rel="icon-temperature">January</option>'+
+						  '<option value="february">February</option>'+
+                          '<option value="march">March</option>'+
+                          '<option value="april">April</option>'+
+                          '<option value="may">May</option>'+
+                          '<option value="june">June</option>'+
+                          '<option value="july">July</option>'+
+                          '<option value="august">August</option>'+
+                          '<option value="september">September</option>'+
+                          '<option value="october">October</option>'+
+                          '<option value="november">November</option>'+
+                          '<option value="december">December</option>'+
+
+						 '</select>' +
+
 					'</div>'
 				)
+
+
 					.appendTo($body);
+
+					/*select js*/
+
+					$('select').each(function(){
+    var $this = $(this), numberOfOptions = $(this).children('option').length;
+  
+    $this.addClass('select-hidden'); 
+    $this.wrap('<div class="select"></div>');
+    $this.after('<div class="select-styled"></div>');
+
+    var $styledSelect = $this.next('div.select-styled');
+    $styledSelect.text($this.children('option').eq(0).text());
+  
+    var $list = $('<ul />', {
+        'class': 'select-options'
+    }).insertAfter($styledSelect);
+  
+    for (var i = 0; i < numberOfOptions; i++) {
+        $('<li />', {
+            text: $this.children('option').eq(i).text(),
+            rel: $this.children('option').eq(i).val()
+        }).appendTo($list);
+    }
+  
+    var $listItems = $list.children('li');
+  
+    $styledSelect.click(function(e) {
+        e.stopPropagation();
+        $('div.select-styled.active').not(this).each(function(){
+            $(this).removeClass('active').next('ul.select-options').hide();
+        });
+        $(this).toggleClass('active').next('ul.select-options').toggle();
+    });
+  
+    $listItems.click(function(e) {
+        e.stopPropagation();
+        $styledSelect.text($(this).text()).removeClass('active');
+        $this.val($(this).attr('rel'));
+        $list.hide();
+        //console.log($this.val());
+    });
+  
+    $(document).click(function() {
+        $styledSelect.removeClass('active');
+        $list.hide();
+    });
+
+});
+
+
 
 			// Navigation Panel.
 				$(
@@ -133,6 +204,11 @@ $('#appearmenu').fadeOut(50);
 
 });
 
+
+/*select*/
+
+
  
 
 })(jQuery);
+

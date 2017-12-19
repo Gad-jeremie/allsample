@@ -5,15 +5,7 @@
 	ZeroFour by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/ 
-  #titleBar .toggle:hover{
-  background:rgba(0,0,0,0.3);
- outline:none;
- }
-
-#titleBar .toggle{
-outline:none;
-}
+*/
 
 /* Reset */
 
@@ -2171,7 +2163,7 @@ outline:none;
 				box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3), inset 0px 0px 0px 2px rgba(255, 255, 255, 0.075), 0px 1px 6px 0px rgba(0, 0, 0, 0.35);
 				display: block;
 				/*gad*/
-				height: 95px;
+				height: 105px;
 				left: 0;
 				position: absolute;
 				text-shadow: -1px -1px 0 black;
@@ -2205,68 +2197,50 @@ outline:none;
 			}
 
 
-				#titleBar .title {
-					display: block;
-					text-transform: uppercase;
-					font-weight: 800;
-					letter-spacing: 0.04em;
-					color: #fff;
-					line-height: 44px;
-					text-align: center;
+				#titleBar .title img{
+					display: flex; 
+					margin: .5em 45%;	 					
 				}
 
-				#titleBar .toggle {
-					position: absolute;
-					left: 0;
+				#titleBar .title img:hover{
+					opacity: .8;	 					
+				}
+
+
+				#titleBar .toggle{				 
 					/*gad*/
-					top: 0;
-                    width: 60px;
-                    height: 96%;
-					opacity: 0.3;
+					position: absolute;
+                   left: .2em;
+                   top: .13em;
+                   width: 50px;
+                   height: 3.55em;
+                   opacity: 0.3;
+                   text-decoration: none;                 
 				}
-
-
 
 
 
 				/*fa fa gad cart*/
 				#titleBar .fafa {
 					position: absolute;
-					right: 0;
+					right: .2em;
 					/*gad*/
-					top: 0;
-                    width: 60px;
-                    height: 96%;
+					top: .13em;
+                    width: 42px;
+                    height: 3.5em;
 					opacity: 0.3;
-					text-decoration: none;
+					text-decoration: none;				 
 				}
 
 
-					#titleBar .fafa:before {
-						display: normal;
-						font-family: FontAwesome;
-						text-decoration: none;
-						font-style: normal;
-						font-weight: normal;
-						line-height: 1;
-						-webkit-font-smoothing: antialiased;
-						-moz-osx-font-smoothing: grayscale;
-						font-size: 18px;
-						/*width: 44px;
-						height: 44px;
-						*/
-						/*gad*/    line-height: 60px;
-						 line-height: 62px;
-                         padding: 0 .9em;
-						text-align: center;
-						color: #fff;
-						content: '\f07a';
-					}
 
-					/*fa fa gad cart*/
+              #titleBar .toggle:hover,#titleBar .fafa:hover{
+              background:rgba(0,0,0,0.3);
+              opacity: 0.8;
+              }
 
 
-					#titleBar .toggle:before {
+					#titleBar .fafa:before,#titleBar .toggle:before {
 						display: inline-block;
 						font-family: FontAwesome;
 						text-decoration: none;
@@ -2279,17 +2253,31 @@ outline:none;
 						/*width: 44px;
 						height: 44px;
 						*/
-						/*gad*/    line-height: 60px;
-						 line-height: 62px;
-                         padding: 0 .9em;
+						/*gad*/    
+						/*line-height: 60px;	*/					 
+                        margin: .9em .95em;
 						text-align: center;
 						color: #fff;
-						content: '\f0c9';
+						
 					}
 
-					#titleBar .toggle:active {
-						opacity: 0.5;
+					#titleBar .toggle:before {
+					content: '\f0c9';
 					}
+
+					#titleBar .fafa:before{
+					content: '\f07a';
+					 margin: .92em .77em;
+					}
+
+					/*fa fa gad cart*/
+
+					
+
+				/*	#titleBar .toggle:focus ,#titleBar .fafa:focus{
+					 opacity: 0.8;
+					 
+					}*/
 
 			#navPanel {
 				-moz-backface-visibility: hidden;
@@ -2371,6 +2359,99 @@ outline:none;
 				#navPanel .depth-0 {
 					color: #fff;
 				}
+
+				/*select gad menu*/
+				.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+
+.select {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  font-size: 13px;
+  width: 95%;
+  margin: 9px auto;
+  height: 40px;
+  color: #666;
+
+
+}
+
+.select-styled {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f4f4f4;
+  padding: 10px 15px;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.select-styled:after {
+     content: "";
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    border-color: #666 transparent transparent transparent;
+    position: absolute;
+    top: 19px;
+    right: 10px;
+  /*    -moz-border-radius: 50px;
+  -o-border-radius: 50px;
+  -webkit-border-radius: 50px;
+   border-radius: 50px; */
+
+   }
+.select-styled:hover {
+  background-color: #e8e8e8;
+}
+.select-styled:active, .select-styled.active {
+  background-color: #ab3326;
+}
+.select-styled:active:after, .select-styled.active:after {
+  top: 9px;
+  border-color: transparent transparent #fff transparent;
+}
+
+.select-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #e5e5e5;
+
+}
+.select-options li {
+  margin: 0;
+  padding: 12px 0;
+  text-indent: 15px;
+  border-top: 1px solid #962d22;
+  -moz-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+}
+.select-options li:hover {
+  color: #444;
+  background: #fff;
+}
+.select-options li[rel="hide"] {
+  display: none;
+}
+
+
+
 
     /*gad*/
 			body.navPanel-visible #page-wrapper {
